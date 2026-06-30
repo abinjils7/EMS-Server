@@ -3,6 +3,299 @@ npm install
 cp .env.example .env
 npm run dev
 
+
+# Employee Management System - Backend
+
+The backend of the **Employee Management System (EMS)** is a RESTful API built with **Node.js**, **Express.js**, and **MongoDB**. It provides secure authentication, role-based authorization, employee management, attendance tracking, task management, leave management, and calendar event APIs.
+
+## 🚀 Features
+
+### 🔐 Authentication & Authorization
+
+- JWT Authentication
+- Role-Based Access Control (Admin, Manager, Employee)
+- Secure Password Hashing (bcrypt)
+- Login & Logout
+- Forgot Password
+- Reset Password
+- Change Password
+- Protected Routes
+
+---
+
+### 👥 Employee Management
+
+Admin can:
+
+- Add Employee
+- Update Employee
+- Delete Employee
+- View Employee Details
+- Search Employees
+- Filter Employees
+- Manage Departments
+
+Employee Information:
+
+- Employee ID
+- Name
+- Email
+- Phone
+- Department
+- Designation
+- Joining Date
+- Salary (Optional)
+- Profile Picture
+- Status (Active/Inactive)
+
+---
+
+### 🕒 Attendance Management
+
+Employees can:
+
+- Check In
+- Check Out
+
+Attendance stores:
+
+- Date
+- Check-In Time
+- Check-Out Time
+- Total Working Hours
+- Late Arrival
+- Overtime
+- Attendance Status
+
+Attendance Status:
+
+- Present
+- Absent
+- Leave
+- Half Day
+- Holiday
+
+---
+
+### 📋 Daily Task Management
+
+Employees can:
+
+- Submit Daily Work
+- Update Task Status
+
+Task Details:
+
+- Date
+- Task Title
+- Description
+- Hours Worked
+- Status
+
+Task Status:
+
+- Pending
+- In Progress
+- Completed
+
+Managers can:
+
+- Review Tasks
+- Comment on Tasks
+- Approve Tasks
+
+---
+
+### 🌴 Leave Management
+
+Employees can:
+
+- Apply for Leave
+- View Leave Status
+
+Managers/Admin can:
+
+- Approve Leave
+- Reject Leave
+
+---
+
+### 📅 Calendar Events
+
+- Create Company Events
+- Update Events
+- Delete Events
+- View Events
+
+---
+
+### 📊 Reports
+
+- Monthly Attendance Report
+- Employee Attendance History
+- Task Reports
+- Leave Reports
+- Dashboard Statistics
+
+---
+
+## 🛠 Tech Stack
+
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- JWT
+- bcrypt
+- Cookie Parser
+- Express Validator
+- Multer (Profile Image Upload)
+- Cloudinary (Optional)
+- Nodemailer (Password Reset)
+- dotenv
+- CORS
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── config/
+├── controllers/
+├── middleware/
+├── models/
+├── routes/
+├── services/
+├── utils/
+├── validations/
+├── uploads/
+├── app.js
+└── server.js
+```
+
+---
+
+## 📦 Installation
+
+### Clone the repository
+
+```bash
+git clone https://github.com/your-username/employee-management-system.git
+```
+
+### Navigate to backend
+
+```bash
+cd employee-management-system/backend
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Create a `.env` file
+
+```env
+PORT=5000
+
+MONGO_URI=your_mongodb_connection_string
+
+JWT_SECRET=your_jwt_secret
+
+JWT_EXPIRES_IN=7d
+
+CLIENT_URL=http://localhost:5173
+
+EMAIL_USER=your_email
+
+EMAIL_PASS=your_email_password
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+
+CLOUDINARY_API_KEY=your_api_key
+
+CLOUDINARY_API_SECRET=your_api_secret
+```
+
+---
+
+## ▶️ Running the Server
+
+Development
+
+```bash
+npm run dev
+```
+
+Production
+
+```bash
+npm start
+```
+
+Server runs on:
+
+```
+http://localhost:5000
+```
+
+---
+
+## 🔗 API Modules
+
+- Authentication
+- Users
+- Employees
+- Attendance
+- Tasks
+- Leave Management
+- Departments
+- Calendar Events
+- Reports
+
+---
+
+## 🔒 Security
+
+- JWT Authentication
+- Password Hashing with bcrypt
+- Protected Routes
+- Role-Based Authorization
+- Input Validation
+- CORS Configuration
+- Environment Variables
+- HTTP-only Cookies (Optional)
+
+---
+
+## 📈 Future Enhancements
+
+- Payroll Management
+- Real-time Notifications (Socket.IO)
+- Email Notifications
+- Audit Logs
+- Performance Analytics
+- Multi-Company Support
+- API Documentation (Swagger)
+- Docker Deployment
+- CI/CD Pipeline
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+Developed with ❤️ by **ABIN JILS**
+
+
 ### Endpoints
 POST  /api/auth/register
 POST  /api/auth/login
