@@ -1,0 +1,41 @@
+{
+  "name": "ems-backend",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --watch src --watch server.ts --ext ts --exec tsx server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@types/streamifier": "^0.1.2",
+    "bcryptjs": "latest",
+    "cloudinary": "^2.10.0",
+    "cookie-parser": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "express-rate-limit": "latest",
+    "helmet": "latest",
+    "jsonwebtoken": "latest",
+    "mongoose": "latest",
+    "multer": "^2.2.0",
+    "nodemailer": "latest",
+    "streamifier": "^0.1.1",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "latest",
+    "@types/cookie-parser": "latest",
+    "@types/cors": "latest",
+    "@types/express": "latest",
+    "@types/jsonwebtoken": "latest",
+    "@types/multer": "^2.1.0",
+    "@types/node": "latest",
+    "@types/nodemailer": "latest",
+    "nodemon": "^3.1.14",
+    "ts-node-dev": "latest",
+    "tsx": "^4.22.4",
+    "typescript": "latest"
+  }
+}
